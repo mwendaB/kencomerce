@@ -3,20 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "dev-https": "next dev --experimental-https",
-    "build": "next build",
-    "build-debug": "next build --debug",
-    "start": "next start",
-    "lint": "next lint",
-    "format": "prettier --write .",
-    "test": "jest",
-    "seed": "tsx ./lib/db/seed.ts",
     "email": "email dev",
-    "info": "next info",
-    "prebuild": "node ./scripts/prebuild.js",
-    "postbuild": "node ./scripts/postbuild.js",
-    "clear-cache": "rm -rf .next && rm -rf node_modules/.cache"
+    "prebuild": "node scripts/prebuild.js",
+    "seed": "npx tsx ./lib/db/seed.ts",
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+
   },
   "dependencies": {
     "@auth/mongodb-adapter": "^3.7.4",
